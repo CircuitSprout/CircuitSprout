@@ -1,6 +1,5 @@
 # Circuit Sprout - Portfolio Website
-
-A modern, fairycore-inspired portfolio website where technology meets nature. Built with React, TypeScript, and Vite, featuring sustainable design principles and organic aesthetics.
+The following is a personal project depicting my growing knowledge of full stack applications and understanding, as well as hands-on practice with Vite + React to create a personalized website with access to a portfolio (i.e. my GitHub) as well as my email for contact. 
 
 ## Project Overview
 
