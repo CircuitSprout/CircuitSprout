@@ -1,0 +1,122 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;500;600;700&display=swap');
+
+/* CSS Variables for Fairycore/Solarpunk Theme */
+:root {
+  --primary-bg: linear-gradient(135deg, #e0f7fa 0%, #f8ffae 100%);
+  --tech-green: #84e802;
+  --forest-green: #2d5016;
+  --moss-green: #8fbc8f;
+  --fairy-pink: #ffc1cc;
+  --nature-brown: #8b4513;
+  --circuit-blue: #00bcd4;
+  --soft-white: #fafafa;
+  --shadow-tech: 0 8px 32px rgba(132, 232, 2, 0.1);
+  --shadow-nature: 0 8px 32px rgba(139, 69, 19, 0.1);
+  --border-radius: 20px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oxanium', 'Segoe UI', sans-serif;
+  background: var(--primary-bg);
+  color: var(--forest-green);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tech-Nature Typography */
+h1, h2, h3 {
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 600;
+  color: var(--forest-green);
+  text-shadow: 2px 2px 4px rgba(132, 232, 2, 0.1);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+p {
+  font-size: 1.1rem;
+  color: var(--forest-green);
+  margin-bottom: 1rem;
+}
+
+code {
+  font-family: 'Kode Mono', monospace;
+  background: rgba(132, 232, 2, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--tech-green);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(132, 232, 2, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tech-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--forest-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,85 @@
+/* Global Reset and Fairycore/Solarpunk Foundation */
+:root {
+  /* Color Palette - Technology meets Nature */
+  --primary-bg: linear-gradient(135deg, #e0f7fa 0%, #f8ffae 100%);
+  --tech-green: #84e802;
+  --forest-green: #2d5016;
+  --moss-green: #8fbc8f;
+  --fairy-pink: #ffc1cc;
+  --nature-brown: #8b4513;
+  --circuit-blue: #00bcd4;
+  --soft-white: #fafafa;
+  
+  /* Shadows and Effects */
+  --shadow-tech: 0 8px 32px rgba(132, 232, 2, 0.1);
+  --shadow-nature: 0 8px 32px rgba(139, 69, 19, 0.1);
+  --border-radius: 20px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Typography */
+  font-family: 'Oxanium', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: var(--forest-green);
+  background: var(--primary-bg);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--primary-bg);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Remove default focus outline and add custom one */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--tech-green);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Improve text selection */
+::selection {
+  background-color: rgba(132, 232, 2, 0.3);
+  color: var(--forest-green);
+}
+
+/* Loading animation for smooth transitions */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

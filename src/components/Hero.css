@@ -1,0 +1,206 @@
+.hero {
+  padding: 4rem 0;
+  margin: 2rem 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-card {
+  position: relative;
+  background: rgba(250, 250, 250, 0.9);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(132, 232, 2, 0.2);
+  transition: var(--transition);
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.hero-card:hover {
+  border-color: var(--tech-green);
+  box-shadow: var(--shadow-tech);
+  transform: translateY(-10px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--tech-green), var(--moss-green));
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(132, 232, 2, 0.3);
+  transition: var(--transition);
+}
+
+.hero-card:hover .icon-container {
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(132, 232, 2, 0.4);
+}
+
+.section-icon {
+  color: white;
+  width: 28px;
+  height: 28px;
+}
+
+.card-title {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--forest-green);
+  letter-spacing: 0.15em;
+  text-shadow: 1px 1px 2px rgba(132, 232, 2, 0.1);
+  flex: 1;
+}
+
+.card-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--forest-green);
+  text-align: justify;
+  position: relative;
+  z-index: 2;
+}
+
+/* Fairycore glow effect */
+.card-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    rgba(132, 232, 2, 0.1),
+    rgba(143, 188, 143, 0.1),
+    rgba(255, 193, 204, 0.1),
+    rgba(132, 232, 2, 0.1)
+  );
+  background-size: 400% 400%;
+  border-radius: var(--border-radius);
+  z-index: -1;
+  opacity: 0;
+  transition: var(--transition);
+  animation: gradient-shift 3s ease infinite;
+}
+
+.hero-card:hover .card-glow {
+  opacity: 1;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Individual card styling */
+.discover {
+  background: linear-gradient(135deg, rgba(132, 232, 2, 0.05), rgba(250, 250, 250, 0.9));
+}
+
+.digitize {
+  background: linear-gradient(135deg, rgba(0, 188, 212, 0.05), rgba(250, 250, 250, 0.9));
+}
+
+.design {
+  background: linear-gradient(135deg, rgba(255, 193, 204, 0.05), rgba(250, 250, 250, 0.9));
+}
+
+/* Nature-inspired particles effect */
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(132, 232, 2, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, rgba(143, 188, 143, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 60% 30%, rgba(255, 193, 204, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px, 40px 40px;
+  opacity: 0;
+  transition: var(--transition);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-card:hover::before {
+  opacity: 1;
+  animation: float-particles 6s ease-in-out infinite;
+}
+
+@keyframes float-particles {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-5px) translateX(2px);
+  }
+  50% {
+    transform: translateY(-3px) translateX(-2px);
+  }
+  75% {
+    transform: translateY(-7px) translateX(1px);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+  
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .hero-card {
+    padding: 2rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .icon-container {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .section-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .card-content {
+    font-size: 1rem;
+  }
+}

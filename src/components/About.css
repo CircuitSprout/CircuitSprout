@@ -1,0 +1,333 @@
+.about {
+  padding: 6rem 0;
+  background: linear-gradient(
+    135deg,
+    rgba(250, 250, 250, 0.8) 0%,
+    rgba(232, 247, 250, 0.9) 50%,
+    rgba(248, 255, 174, 0.8) 100%
+  );
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(132, 232, 2, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(143, 188, 143, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--forest-green);
+  margin-bottom: 4rem;
+  text-shadow: 2px 2px 4px rgba(132, 232, 2, 0.1);
+  position: relative;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--tech-green), var(--moss-green));
+  border-radius: 2px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Story Section */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card {
+  background: rgba(250, 250, 250, 0.9);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(132, 232, 2, 0.2);
+  box-shadow: var(--shadow-tech);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--tech-green);
+  box-shadow: 0 12px 40px rgba(132, 232, 2, 0.15);
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.story-icon {
+  color: var(--tech-green);
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 4px rgba(132, 232, 2, 0.3));
+}
+
+.story-header h3 {
+  font-size: 1.8rem;
+  color: var(--forest-green);
+  margin: 0;
+}
+
+.story-card p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.story-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Section */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skills-card {
+  background: rgba(250, 250, 250, 0.9);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(143, 188, 143, 0.2);
+  box-shadow: var(--shadow-nature);
+  transition: var(--transition);
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--moss-green);
+  box-shadow: 0 12px 40px rgba(143, 188, 143, 0.15);
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skills-icon {
+  color: var(--moss-green);
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 4px rgba(143, 188, 143, 0.3));
+}
+
+.skills-header h3 {
+  font-size: 1.8rem;
+  color: var(--forest-green);
+  margin: 0;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.language-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background: rgba(132, 232, 2, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(132, 232, 2, 0.2);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.language-item:hover {
+  background: rgba(132, 232, 2, 0.1);
+  border-color: var(--tech-green);
+  box-shadow: 0 8px 25px rgba(132, 232, 2, 0.2);
+}
+
+.language-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+}
+
+.language-item:hover .language-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.language-name {
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 600;
+  color: var(--forest-green);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Philosophy Card */
+.philosophy-card {
+  background: rgba(250, 250, 250, 0.9);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 193, 204, 0.2);
+  box-shadow: var(--shadow-nature);
+  transition: var(--transition);
+  position: relative;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--fairy-pink);
+  box-shadow: 0 12px 40px rgba(255, 193, 204, 0.15);
+}
+
+.philosophy-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.philosophy-icon {
+  color: var(--fairy-pink);
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 2px 4px rgba(255, 193, 204, 0.3));
+}
+
+.philosophy-header h3 {
+  font-size: 1.5rem;
+  color: var(--forest-green);
+  margin: 0;
+}
+
+.philosophy-card p {
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+  color: var(--forest-green);
+}
+
+/* Decorative elements */
+.story-card::before,
+.skills-card::before,
+.philosophy-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    transparent 0%,
+    rgba(132, 232, 2, 0.03) 50%,
+    transparent 100%
+  );
+  animation: rotate-bg 20s linear infinite;
+  pointer-events: none;
+}
+
+.philosophy-card::before {
+  background: radial-gradient(
+    circle,
+    transparent 0%,
+    rgba(255, 193, 204, 0.03) 50%,
+    transparent 100%
+  );
+}
+
+@keyframes rotate-bg {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .languages-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 0;
+  }
+  
+  .about-container {
+    padding: 0 1rem;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .story-card,
+  .skills-card,
+  .philosophy-card {
+    padding: 2rem;
+  }
+  
+  .languages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .language-item {
+    padding: 1rem 0.5rem;
+  }
+  
+  .language-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
+}
